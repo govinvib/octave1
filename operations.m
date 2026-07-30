@@ -64,5 +64,47 @@ for i=1:length(list2)
   end
 end
 #}
+#{
+#fibonnaci numbers
 
+f1=1;
+f2=1;
+
+disp(num2str(f1));
+disp(num2str(f2));
+
+for i=3:100
+  f3=f1+f2;
+  disp(f3);
+  f1=f2;
+  f2=f3;
+end
+
+#}
+
+#prime numbers from 1-1000
+#{
+for i=1:1000
+  x=sum(rem(i,1:i)==0);
+  if x==2
+    disp(i);
+  end
+end
+#}
+
+#plotting lines
+
+x = 0:1:10;                % Creates numbers from 0 to 10, stepping by 1
+y = 3 * x + 3;             % The equation for the line
+
+plot(x, y, 'r', 'LineWidth', 2); % 'r' makes the line red, LineWidth makes it thicker
+grid on;
+hold on;
+
+x = -10:1:20;                % Creates numbers from -10 to 20, stepping by 1
+y = 4 * x - 3;             % The equation for the line
+
+plot(x, y, 'b', 'LineWidth', 10); % 'r' makes the line red, LineWidth makes it thicker
+grid on;
+hold off;
 
